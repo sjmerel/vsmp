@@ -15,7 +15,7 @@ My NST was prone to random crashes, and doing a factory reset seemed to fix it. 
  - Mount the SD card on your computer (e.g. using an SD card reader)
  - Write the img file to the SD card:
 
-    sudo dd if=./img/n2T-Recovery_0.2.img of=/dev/disk<n> bs=1m
+   `sudo dd if=./img/n2T-Recovery_0.2.img of=/dev/disk<n> bs=1m`
 
    where `<n>` is replaced with the number of your disk device.  (On OSX you can find that with `diskutil list`.)
  - Put the card in your NST and reboot
@@ -25,15 +25,17 @@ My NST was prone to random crashes, and doing a factory reset seemed to fix it. 
 This is done with NookManager, also available from the XDA forums but also here in the img folder.
 - Mount the SD card on your computer
 - Write the img file:
-    sudo dd if=./img/NookManager.img of=/dev/disk<n> bs=1m
+
+    `sudo dd if=./img/NookManager.img of=/dev/disk<n> bs=1m`
+
 - **If your NST has been updated to firmware 1.2.2**, you will need to edit scripts/install_nookmods and scripts/install_old_installer on the SD card; change the line
 
 
-    if [ "$SYSTEM" != "1.2.0" -a "$SYSTEM" != "1.2.1" ]; then
+    `if [ "$SYSTEM" != "1.2.0" -a "$SYSTEM" != "1.2.1" ]; then`
 
 to 
 
-    if [ "$SYSTEM" != "1.2.0" -a "$SYSTEM" != "1.2.1" -a "$SYSTEM" != "1.2.2"]; then
+    `if [ "$SYSTEM" != "1.2.0" -a "$SYSTEM" != "1.2.1" -a "$SYSTEM" != "1.2.2"]; then`
 
 
 - Put the card in your NST and reboot
