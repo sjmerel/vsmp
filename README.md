@@ -1,5 +1,7 @@
 # Very Slow Movie Player for Nook Simple Touch
 
+![front.jpg](./front.jpg)
+
 This project was inspired by [this article](https://makezine.com/projects/the-very-slow-movie-player/) in Make Magazine. That design uses a Raspberry Pi and an e-ink display, but I happened to have an old Nook Simple Touch (NST) e-reader in my closet, so I decided to try to build one with that.
 
 A shout out to the folks at [the XDA NST forums](https://forum.xda-developers.com/c/barnes-noble-nook-touch.1198/) for their help!
