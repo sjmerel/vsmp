@@ -2,7 +2,9 @@
 
 ![front.jpg](./front.jpg)
 
-This project was inspired by [this article](https://makezine.com/projects/the-very-slow-movie-player/) in Make Magazine. That design uses a Raspberry Pi and an e-ink display, but I happened to have an old Nook Simple Touch (NST) e-reader in my closet, so I decided to try to build one with that.
+This project was inspired by [this article](https://makezine.com/projects/the-very-slow-movie-player/) in Make Magazine. It looks like a photograph in a frame, but it's actually playing a movie very slowly (1/300 speed ifor my implementation).  
+
+That Make Magazine design uses a Raspberry Pi and an e-ink display, but I happened to have an old Nook Simple Touch (NST) e-reader in my closet, so I decided to try to build one with that.
 
 A shout out to the folks at [the XDA NST forums](https://forum.xda-developers.com/c/barnes-noble-nook-touch.1198/) for their help!
 
@@ -51,3 +53,16 @@ This is done with NookManager, also available from the XDA forums but also here 
  - Convert the movie file to a series of images (optimized for the e-ink display) in a directory on the SD card using the `process.sh` script.
  - Put the SD card into your NST.
  - Build and and run the app with Android Studio.  If your computer automatically mounts the NST and its SD card as mine does, unmount them so the app can access the card.
+
+## Put it in a frame
+This will depend on what kind of frame you have, obviously.  Here's what I did for the one I happened to have at hand:
+![back.jpg](back.jpg)
+I used [this right-angle USB cable](https://www.amazon.com/gp/product/B00EBGGXS2/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) and used a Dremel tool to make space for the cable. 
+
+## Some notes on the app
+The original design advanced one frame (i.e. 1/24 second for standard film) each minute, or 1/1400 speed.  I find the frame changes a little distracting, so my version advances the film by one second each five minutes, which means it plays 1/300 speed.  At that speed it will play through an hour of video in about 12 days.
+
+At startup or when an SD card is inserted, it scans the card and makes a list of directories containing files in the format img%05d.jpg, starting with frame 1 (i.e. img00001.jpg).  After playing the last file in a directory, it will move on to the next in the list.  It also remembers the directory & frame number between launches.
+
+Tapping the screen will toggle label at the bottom showing the current time and image file.  Tapping the far right/left side of the screen will go forward/back by 1 frame.  (These are meant for debugging, really; once the NST is in the frame, you lose access to the screen.)
+
