@@ -2,7 +2,7 @@
 
 ![front.jpg](./front.jpg)
 
-This project was inspired by [this article](https://makezine.com/projects/the-very-slow-movie-player/) in Make Magazine. It looks like a photograph in a frame, but it's actually playing a movie very slowly (1/300 speed ifor my implementation).  
+This project was inspired by [this article](https://makezine.com/projects/the-very-slow-movie-player/) in Make Magazine. It looks like a photograph in a frame, but it's actually playing a movie very slowly (1/300 speed for my implementation).  
 
 That Make Magazine design uses a Raspberry Pi and an e-ink display, but I happened to have an old Nook Simple Touch (NST) e-reader in my closet, so I decided to try to build one with that.
 
