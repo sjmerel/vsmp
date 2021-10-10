@@ -56,7 +56,9 @@ This is done with NookManager, also available from the XDA forums but also here 
 
 ## Put it in a frame
 This will depend on what kind of frame you have, obviously.  Here's what I did for the one I happened to have at hand:
+
 ![back.jpg](back.jpg)
+
 I used [this right-angle USB cable](https://www.amazon.com/gp/product/B00EBGGXS2/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) and used a Dremel tool to make space for the cable. 
 
 ## Some notes on the app
